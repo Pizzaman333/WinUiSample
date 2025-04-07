@@ -9,37 +9,267 @@
     mc:Ignorable="d"
     Title="WinUiSample">
 
-
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
 
-        <!-- Background colors for rows -->
-        <Rectangle Grid.Row="0" Grid.ColumnSpan="3" Fill="LightBlue"/>
-        <Rectangle x:Name="SpecialBoy"  Grid.Row="1" Grid.ColumnSpan="3" Fill="LightGreen"/>
-        <Rectangle Grid.Row="2" Grid.ColumnSpan="3" Fill="LightCoral"/>
-        <!-- Transparent rectangles for columns -->
-        <Rectangle Grid.Column="0" Grid.RowSpan="3" Fill="LightYellow" Opacity="0.5"/>
-        <Rectangle Grid.Column="1" Grid.RowSpan="3" Fill="LightPink" Opacity="0.5"/>
-        <Rectangle Grid.Column="2" Grid.RowSpan="3" Fill="LightBlue" Opacity="0.5"/>
-
-        <Button  
-            x:Name="OpenButton" 
-            Click="OpenButton_Click" 
-            Grid.Column="1"
+        <!-- Row backgrounds -->
+        <!--
+        <Rectangle
+            Grid.Row="0"
+            Grid.ColumnSpan="14"
+            Fill="MediumSeaGreen" />
+        <Rectangle
             Grid.Row="1"
-            HorizontalAlignment="Center" 
-            VerticalAlignment="Center">
-            I'm a button, aren't I?
-        </Button>
-    </Grid>
+            Grid.ColumnSpan="14"
+            Fill="CornflowerBlue" />
+        <Rectangle
+            Grid.Row="2"
+            Grid.ColumnSpan="14"
+            Fill="LightCoral" />
+        <Rectangle
+            Grid.Row="3"
+            Grid.ColumnSpan="14"
+            Fill="Goldenrod" />
+        <Rectangle
+            Grid.Row="4"
+            Grid.ColumnSpan="14"
+            Fill="Teal" />
+        <Rectangle
+            Grid.Row="5"
+            Grid.ColumnSpan="14"
+            Fill="SlateGray" />
+        <Rectangle
+            Grid.Row="6"
+            Grid.ColumnSpan="14"
+            Fill="Tomato" />
+        <Rectangle
+            Grid.Row="7"
+            Grid.ColumnSpan="14"
+            Fill="OliveDrab" />
+        <Rectangle
+            Grid.Row="8"
+            Grid.ColumnSpan="14"
+            Fill="DodgerBlue" />
+        <Rectangle
+            Grid.Row="9"
+            Grid.ColumnSpan="14"
+            Fill="Crimson" />
+        <Rectangle
+            Grid.Row="10"
+            Grid.ColumnSpan="14"
+            Fill="DarkCyan" />
+        <Rectangle
+            Grid.Row="11"
+            Grid.ColumnSpan="14"
+            Fill="DarkGoldenrod" />
+        <Rectangle
+            Grid.Row="12"
+            Grid.ColumnSpan="14"
+            Fill="SaddleBrown" />
+        <Rectangle
+            Grid.Row="13"
+            Grid.ColumnSpan="14"
+            Fill="DarkSlateGray" />
 
+        -->
+        <!-- Column overlays (semi-transparent) -->
+        <!--
+        <Rectangle
+            Grid.Column="0"
+            Grid.RowSpan="14"
+            Fill="Black"
+            Opacity="0.15" />
+        <Rectangle
+            Grid.Column="1"
+            Grid.RowSpan="14"
+            Fill="Black"
+            Opacity="0.2" />
+        <Rectangle
+            Grid.Column="2"
+            Grid.RowSpan="14"
+            Fill="Black"
+            Opacity="0.15" />
+        <Rectangle
+            Grid.Column="3"
+            Grid.RowSpan="14"
+            Fill="Black"
+            Opacity="0.2" />
+        <Rectangle
+            Grid.Column="4"
+            Grid.RowSpan="14"
+            Fill="Black"
+            Opacity="0.15" />
+        <Rectangle
+            Grid.Column="5"
+            Grid.RowSpan="14"
+            Fill="Black"
+            Opacity="0.2" />
+        <Rectangle
+            Grid.Column="6"
+            Grid.RowSpan="14"
+            Fill="Black"
+            Opacity="0.15" />
+        <Rectangle
+            Grid.Column="7"
+            Grid.RowSpan="14"
+            Fill="Black"
+            Opacity="0.2" />
+        <Rectangle
+            Grid.Column="8"
+            Grid.RowSpan="14"
+            Fill="Black"
+            Opacity="0.15" />
+        <Rectangle
+            Grid.Column="9"
+            Grid.RowSpan="14"
+            Fill="Black"
+            Opacity="0.2" />
+        <Rectangle
+            Grid.Column="10"
+            Grid.RowSpan="14"
+            Fill="Black"
+            Opacity="0.15" />
+        <Rectangle
+            Grid.Column="11"
+            Grid.RowSpan="14"
+            Fill="Black"
+            Opacity="0.2" />
+        <Rectangle
+            Grid.Column="12"
+            Grid.RowSpan="14"
+            Fill="Black"
+            Opacity="0.15" />
+        <Rectangle
+            Grid.Column="13"
+            Grid.RowSpan="14"
+            Fill="Black"
+            Opacity="0.2" />-->
+
+        <Grid
+            Grid.Column="5"
+            Grid.Row="5"
+            Grid.ColumnSpan="4"
+            Grid.RowSpan="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <!-- Shadow -->
+            <Border
+                Background="Black"
+                Opacity="0.2"
+                CornerRadius="10"
+                Width="380"
+                Height="50"
+                Margin="4,4,0,0" />
+
+            <Button
+                x:Name="OpenButton"
+                Click="OpenButton_Click"
+                Width="380"
+                Height="50"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontWeight="Bold"
+                FontSize="40"
+                Background="MediumAquamarine"
+                Foreground="White"
+                BorderThickness="0"
+                CornerRadius="10">
+                Submit
+            </Button>
+        </Grid>
+
+        <Grid
+            Grid.Column="5"
+            Grid.Row="3"
+            Grid.ColumnSpan="4"
+            Grid.RowSpan="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <!-- Shadow -->
+            <Border
+                Background="Black"
+                Opacity="0.2"
+                CornerRadius="10"
+                Width="380"
+                Height="55"
+                Margin="4,4,0,0" />
+
+            <TextBox
+                x:Name="InputBox"
+                Height="55"
+                Width="380"
+                Margin="0"
+                FontSize="32"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                PlaceholderText="Enter your name"
+                Background="MistyRose"
+                BorderBrush="MediumVioletRed"
+                BorderThickness="2"
+                CornerRadius="10" />
+        </Grid>
+
+        <Grid
+            Grid.Column="5"
+            Grid.Row="7"
+            Grid.ColumnSpan="4"
+            Grid.RowSpan="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <!-- Shadow -->
+            <Border
+                Background="Black"
+                Opacity="0.2"
+                CornerRadius="10"
+                Width="380"
+                Height="60"
+                Margin="4,4,0,0" />
+
+            <Border
+                Background="Lavender"
+                CornerRadius="10"
+                Width="380"
+                Height="60"
+                Padding="6">
+                <TextBlock
+                    x:Name="OutputText"
+                    FontSize="38"
+                    Text="Your Output"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Foreground="DarkSlateBlue" />
+            </Border>
+        </Grid>
+    </Grid>
 </Window>
